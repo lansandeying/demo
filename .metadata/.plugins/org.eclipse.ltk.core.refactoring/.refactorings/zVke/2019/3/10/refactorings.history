@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;zVke/case&apos; to &apos;case_chrome&apos;" description="Rename resource &apos;case&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="case" name="case_chrome" stamp="1552016982852" updateReferences="true"/>
+</session>

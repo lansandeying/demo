@@ -1,0 +1,7 @@
+import os,sys
+ 
+print(__file__)
+a="F:\my_job\zVke\case\other\demo6.py"
+a=__file__
+print(a.split('\\'))
+print(a.split('\\')[-3])

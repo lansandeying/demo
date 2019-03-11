@@ -1,0 +1,6 @@
+# import os,sys
+# 
+# print(__file__)
+list="aa|bb|cc"
+a=list.split("|")
+print(a)

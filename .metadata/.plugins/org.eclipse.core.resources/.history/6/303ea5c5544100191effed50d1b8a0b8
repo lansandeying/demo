@@ -1,0 +1,6 @@
+import os,sys
+ 
+print(__file__)
+a=__file__
+print(a.split('\\'))
+print(a.split('\\')[-3])
