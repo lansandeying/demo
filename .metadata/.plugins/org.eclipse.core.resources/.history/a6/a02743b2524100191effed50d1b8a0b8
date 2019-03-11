@@ -1,0 +1,5 @@
+import os,sys
+
+print(__file__)
+list="aa|bb|cc"
+list.split

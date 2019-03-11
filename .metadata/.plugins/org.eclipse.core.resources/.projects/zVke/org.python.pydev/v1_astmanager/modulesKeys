@@ -1,0 +1,17 @@
+MODULES_MANAGER_V2
+__init__|F:\my_job\zVke\__init__.py
+page.__init__|F:\my_job\zVke\page\__init__.py
+page.page_login|F:\my_job\zVke\page\page_login.py
+public.__init__|F:\my_job\zVke\public\__init__.py
+public.browser_name|F:\my_job\zVke\public\browser_name.py
+public.csv_read_write|F:\my_job\zVke\public\csv_read_write.py
+public.data_get|F:\my_job\zVke\public\data_get.py
+public.element_image|F:\my_job\zVke\public\element_image.py
+public.excel_read|F:\my_job\zVke\public\excel_read.py
+public.log_out|F:\my_job\zVke\public\log_out.py
+public.public_file|F:\my_job\zVke\public\public_file.py
+public.seleniumgird_get|F:\my_job\zVke\public\seleniumgird_get.py
+public.send_email|F:\my_job\zVke\public\send_email.py
+run_main|F:\my_job\zVke\run_main.py
+run_main_with_email|F:\my_job\zVke\run_main_with_email.py
+run_main_with_threads|F:\my_job\zVke\run_main_with_threads.py

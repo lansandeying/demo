@@ -1,0 +1,12 @@
+eclipse.preferences.version=1
+encoding//case_chrome/login/test_login.py=utf-8
+encoding//case_chrome/other/demo6.py=utf-8
+encoding//case_chrome/other/demotest01.py=utf-8
+encoding//case_firefox/login/test_login.py=utf-8
+encoding//page/page_login.py=utf-8
+encoding//public/browser_name.py=utf-8
+encoding//public/csv_read_write.py=utf-8
+encoding//public/element_image.py=utf-8
+encoding//public/excel_read.py=utf-8
+encoding//public/public_file.py=utf-8
+encoding//public/send_email.py=utf-8
