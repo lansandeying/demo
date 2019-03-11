@@ -2,10 +2,13 @@
 import unittest
 from public.public_file import browser
 from page.page_login import LoginPage, login_url
+a=__file__
+b=a.split('\\')[-3]
+
 class Login_test(unittest.TestCase):
     u'''登录页面的 case'''
     def setUp(self):
-        self.driver = browser("chrome")
+        self.driver = browser(b)
         self.login= LoginPage(self.driver) #login 参数是LoginPage 的实例
         self.login.open(url=login_url,text=u"用户登录 - 博客园")
     def login_case(self, username, psw, expect=True):
@@ -28,7 +31,7 @@ class Login_test(unittest.TestCase):
         u'''输入错诨账号密码'''
         self.login_case("xx", "xx", False)
     def tearDown(self):
-#         self.driver.quit()
+        self.driver.quit()
         pass
 if __name__ == "__main__":
     unittest.main()

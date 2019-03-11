@@ -1,5 +1,6 @@
 # coding:utf-8
 from selenium import webdriver
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from selenium.webdriver.common.action_chains import ActionChains #导入鼠标事件
 from selenium.webdriver.support.select import Select #导入下拉
 # from selenium.common.exceptions import * # 导入所有的异常类
@@ -8,19 +9,20 @@ from selenium.webdriver.support.ui import WebDriverWait #导入显示等待
 # from selenium.webdriver.common.by import By #导入定位元素By方法
 from public import log_out
 log=log_out.logger()
+hub_path="http://192.168.0.75:4444/wd/hub"
 
 def browser(browser='firefox'):
     """
         打开浏览器凼数，"firefox"、 "chrome"、 "ie"、 "phantomjs"
     """
     try:
-        if  browser == "firefox":
+        if  browser == "case_firefox":
             driver = webdriver.Firefox()
             return driver
-        elif browser == "chrome":
+        elif browser == "case_chrome":
             driver = webdriver.Chrome()
             return driver
-        elif browser == "ie":
+        elif browser == "case_ie":
             driver = webdriver.Ie()
             return driver
         elif browser == "phantomjs":
@@ -43,6 +45,43 @@ def browser(browser='firefox'):
             # 启动浏览器配置
             driver = webdriver.Chrome(chrome_options=option, executable_path=r'C:\chomedriver\chromedriver.exe')
             return driver
+        elif browser=="firefox_grid1":
+            capabilities = DesiredCapabilities.FIREFOX
+            capabilities["platform"] = "ANY" 
+            capabilities["browserName"] = "firefox"
+            driver= webdriver.Remote(command_executor=hub_path, desired_capabilities=capabilities )
+            return driver
+        elif browser=="chrome_grid2":
+            capabilities = DesiredCapabilities.CHROME
+            capabilities["platform"] = "ANY" 
+            capabilities["browserName"] = "chrome"  
+            driver= webdriver.Remote(command_executor=hub_path, desired_capabilities=capabilities )
+            return driver       
+        elif browser=="internet_explorer_grid1":
+            capabilities = DesiredCapabilities.INTERNETEXPLORER
+            capabilities["platform"] = "ANY" 
+            capabilities["browserName"] = "internet explorer"
+            driver= webdriver.Remote(command_executor=hub_path, desired_capabilities=capabilities )
+            return driver
+        elif browser=="firefox_grid2":
+            capabilities = DesiredCapabilities.FIREFOX
+            capabilities["platform"] = "ANY" 
+            capabilities["browserName"] = "firefox"   
+            capabilities["version"] = "version"  #待写入  
+        elif browser=="chrome_grid2":
+            capabilities = DesiredCapabilities.CHROME
+            capabilities["platform"] = "ANY" 
+            capabilities["browserName"] = "chrome"   
+            capabilities["version"] = "version" #待写入
+            driver= webdriver.Remote(command_executor=hub_path, desired_capabilities=capabilities )
+            return driver
+        elif browser=="internet_explorer_grid2":
+            capabilities = DesiredCapabilities.INTERNETEXPLORER
+            capabilities["platform"] = "ANY" 
+            capabilities["browserName"] = "internet explorer"   
+            capabilities["version"] = "version" #待写入  
+            driver= webdriver.Remote(command_executor=hub_path, desired_capabilities=capabilities )
+            return driver 
         else:
             print("Not found this browser,You can enter 'firefox','chrome', 'ie' or 'phantomjs'")
     except Exception as msg:
