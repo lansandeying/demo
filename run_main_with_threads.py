@@ -32,10 +32,12 @@ if __name__=="__main__":
     chrome_path="F:\my_job\zVke\case_chrome"
     firefox_path='F:\my_job\zVke\case_firefox'
     test_dirs = [chrome_path,firefox_path]
+    
     for test_dir in test_dirs:
         print(test_dir)
         case_path=test_dir.split('\\')[-1]
-        print(case_path)
-        discover = unittest.defaultTestLoader.discover(test_dir,pattern = 'test*.py')
         
+        unittest.defaultTestLoader._top_level = None
+        discover = unittest.defaultTestLoader.discover(test_dir,pattern = 'test*.py')
+        print(case_path)
 #         run_case(discover,case_path)      

@@ -2,13 +2,16 @@ import logging
 import os
 import sys
 import time
- 
+from os import path   
+d = path.dirname(__file__)  #返回当前文件所在的目录    
+parent_path = path.dirname(d)
+
 class logger:
     def __init__(self, set_level="debug",
                  name=os.path.split(os.path.splitext(sys.argv[0])[0])[-1],
-                 log_name=time.strftime("%Y-%m-%d.log", time.localtime()),
+                 log_name = time.strftime("%Y-%m-%d.log", time.localtime()),
 #                  log_path=os.path.join(os.path.dirname(os.path.abspath(__file__)), "log"),
-                 log_path=r"C:\Users\hp\eclipse-workspace\zVke\log_out\\",
+                 log_path = parent_path+r"\log_out\\",
                  use_console=True):
         '''
             set_level： 设置日志的打印级别，默认为DEBUG

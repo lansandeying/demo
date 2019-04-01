@@ -16,13 +16,13 @@ def browser(browser='firefox'):
         打开浏览器凼数，"firefox"、 "chrome"、 "ie"、 "phantomjs"
     """
     try:
-        if  browser == "case_firefox":
+        if  browser == "firefox":
             driver = webdriver.Firefox()
             return driver
-        elif browser == "case_chrome":
+        elif browser == "chrome":
             driver = webdriver.Chrome()
             return driver
-        elif browser == "case_ie":
+        elif browser == "ie":
             driver = webdriver.Ie()
             return driver
         elif browser == "phantomjs":
